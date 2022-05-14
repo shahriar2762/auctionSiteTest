@@ -11,8 +11,8 @@ import org.testng.annotations.*;
 public class signUp {
     WebDriver driver;
 
-    @BeforeTest
-    public void  beforeTest() {
+    @BeforeMethod
+    public void  beforeStart() {
         System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -21,6 +21,19 @@ public class signUp {
         System.out.println("Browser Start");
 
     }
+
+    @AfterMethod
+    public void tearDown()
+    {
+        if (driver != null) {
+            driver.quit();
+        }
+
+        System.out.println("\nDriver Quit\n");
+
+
+    }
+
     @Test()
     public void TC_01_SignUp_ValidInformation()
     {
@@ -253,11 +266,7 @@ public class signUp {
 
     }
 
-    @AfterTest
-    public void tearDown()
-    {
 
-    }
 
 
 }
