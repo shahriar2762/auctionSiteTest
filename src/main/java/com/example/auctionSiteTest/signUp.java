@@ -23,7 +23,7 @@ public class signUp {
 
     @BeforeMethod
     public void  beforeStart() {
-        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 
@@ -97,7 +97,7 @@ public class signUp {
 
 
 //      If the sign up is not complete then it will remain in the sign up page.
-        Assert.assertEquals(driver.getCurrentUrl(),"http://auctiontakaschool.herokuapp.com/signup/");
+        Assert.assertEquals(driver.getCurrentUrl(),"http://auctiontakaschool.herokuapp.com/register/");
 
 
     }
