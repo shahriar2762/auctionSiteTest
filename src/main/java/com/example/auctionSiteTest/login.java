@@ -41,22 +41,27 @@ public class login {
         WebElement password = driver.findElement(By.name("password"));
         WebElement login = driver.findElement(By.cssSelector(".btn"));
 
-        username.sendKeys("");
-        password.sendKeys("");
+        username.sendKeys("shahriar");
+        password.sendKeys("shr123456");
         login.click();
+
+//      As the server is down, i couldn't check the assertion.
 
     }
 
     @Test()
-    public void TC_02_1_Login_UsernamePasswordInValidInformation()
+    public void TC_02_1_Login_UsernamePasswordInvalidInformation()
     {
         WebElement username = driver.findElement(By.name("username"));
         WebElement password = driver.findElement(By.name("password"));
         WebElement login = driver.findElement(By.cssSelector(".btn"));
 
-        username.sendKeys("");
-        password.sendKeys("");
+        username.sendKeys("shah");
+        password.sendKeys("shr1234567891");
         login.click();
+
+        //      As the server is down, i couldn't check the assertion.
+
 
     }
 
@@ -67,22 +72,28 @@ public class login {
         WebElement password = driver.findElement(By.name("password"));
         WebElement login = driver.findElement(By.cssSelector(".btn"));
 
-        username.sendKeys("");
-        password.sendKeys("");
+        username.sendKeys("shahriar");
+        password.sendKeys(" ");
         login.click();
+
+//        As the server is down, i couldn't check the assertion.
+
 
     }
 
     @Test()
-    public void TC_02_3_Login_PasswordInValidInformation()
+    public void TC_02_3_Login_PasswordInvalidInformation()
     {
         WebElement username = driver.findElement(By.name("username"));
         WebElement password = driver.findElement(By.name("password"));
         WebElement login = driver.findElement(By.cssSelector(".btn"));
 
-        username.sendKeys("");
-        password.sendKeys("");
+        username.sendKeys("shahriar");
+        password.sendKeys("sh1456");
         login.click();
+
+        //        As the server is down, i couldn't check the assertion.
+
 
     }
 
@@ -93,9 +104,12 @@ public class login {
         WebElement password = driver.findElement(By.name("password"));
         WebElement login = driver.findElement(By.cssSelector(".btn"));
 
-        username.sendKeys("");
-        password.sendKeys("");
+        username.sendKeys(" ");
+        password.sendKeys(" ");
         login.click();
+
+        //        As the server is down, i couldn't check the assertion.
+
 
     }
 }
