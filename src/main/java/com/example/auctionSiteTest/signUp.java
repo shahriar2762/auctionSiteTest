@@ -23,7 +23,7 @@ public class signUp {
 
     @BeforeMethod
     public void  beforeStart() {
-        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "E:\\auctionSiteTest\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 
